@@ -1,6 +1,6 @@
 package Servidor;
 
-import java.util.Arrays;
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class GeneradorMatrices {
@@ -9,6 +9,7 @@ public class GeneradorMatrices {
 
 	public void generar() {
 		Random r = new Random();
+		DecimalFormat df = new DecimalFormat("#.00");
 		for (int i = 0; i < enteros.length; i++) {
 			for (int j = 0; j < enteros[i].length; j++) {
 				enteros[i][j] = r.nextInt(9) + 1;
@@ -16,7 +17,8 @@ public class GeneradorMatrices {
 		}
 		for (int i = 0; i < decimales.length; i++) {
 			for (int j = 0; j < decimales[i].length; j++) {
-				decimales[i][j] = Math.random();
+				double numero = Math.random();
+				decimales[i][j] =  Math.round(numero * 100.0) / 100.0;
 			}
 		}
 	}
