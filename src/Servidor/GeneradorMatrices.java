@@ -23,9 +23,24 @@ public class GeneradorMatrices {
 		}
 	}
 
-	public int getEntero(int i, int j) {
+	public static String getEntero(int i, int j) {
 
-		return enteros[i][j];
+		return String.valueOf(enteros[i][j]);
+	}
+	
+	public static void setEntero(int i, int j , String st) {
+
+		enteros[i][j] =  Integer.valueOf(st);
+	}
+
+	public static String getDecimal(int i, int j) {
+
+		return String.valueOf(decimales[i][j]);
+	}
+	
+	public static void setDecimal(int i, int j , String st) {
+
+		decimales[i][j] =  Double.valueOf(st);
 	}
 
 	public static void mostrarMatriz(int x) {

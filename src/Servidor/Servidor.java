@@ -7,6 +7,8 @@ public class Servidor {
 		g.mostrarMatriz(1);
 		g.mostrarMatriz(2);
 		new Controller().start();
-		new PipeLine().foo();
+		do {
+			new PipeLine().foo();
+		} while (true);
 	}
 }
