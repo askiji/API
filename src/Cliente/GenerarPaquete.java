@@ -11,7 +11,7 @@ public class GenerarPaquete {
 
 		String unformatedString = tipoMatriz +"_"+fila+"_"+columna+"_"+b;
 		System.out.println(unformatedString);
-		
+		new EnviarPaquete().enviarPaquete(unformatedString);
 	}
 
 }
